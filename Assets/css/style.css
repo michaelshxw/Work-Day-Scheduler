@@ -2,73 +2,67 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-color: bisque;
 }
 
+/* container holding all the calendar contents on page */
 .container {
-  padding: 80px 0px;
+  border-radius: 30px;
+  background-color: #aef8ae;
+  border: solid black 2px;
+  padding: 50px;
+  padding-bottom: 150px;
+  margin-bottom: 80px;
+  margin-top: 80px;
 }
 
-/* not used
-textarea{
-  background: transparent;
-  border: none;
-  resize: none;
-  color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
-} */
+/* borders for the form input and business hour */
+.form-control, .businessHour {
+  border: solid black 1px;
+}
+
+/* make the background color transparent so the past, present, future colours show */
+.form-control {
+  background-color: transparent;
+  margin-left: 2px;
+}
+
+/* hide the template and iterate the for loop from 0 so the id is correct */
+/* otherwise the template will disappear once the id has changed */
+#template {
+  padding: 1px;
+  display: none;
+}
+
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
+  background-color: white;
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
 }
 
-.description{
-  white-space: pre-wrap;
-}
-
-/* not used 
-.time-block{
-  text-align: center;
-  border-radius: 15px;
-} */
-
-/* .row {
-  white-space: pre-wrap;
-  height: auto;
-  border-top: 1px solid white;;
-} */
-
-/* .hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
-} */
-
+/* background colours for past, present, future */
 .past {
   background-color: #d3d3d3;
-  color: white;
 }
 
 .present {
   background-color: #fa453b;
-  color: white;
 }
 
 .future {
   background-color: #55ed55;
-  color: white;
 }
 
+/* save button styling */
 .saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
   background-color: #06AED5;
+  margin-left: 2px;
   color: white;
+  width: 45px;
+  border: solid black 1px;
 }
 
 .saveBtn i:hover {
@@ -76,7 +70,20 @@ textarea{
   transition: all .3s ease-in-out;
 }
 
-/* save icon size */
-.saveBtn i {
-  font-size: 20px;
+/* delete / clear button styling */
+.deleteBtn {
+  background-color: #eb2727;
+  color: white;
+  position: relative;
+  padding: 10px 50px;
+  top: 885px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: solid black 1px;
 }
+
+.deleteBtn i:hover {
+  font-size: 20px;
+  transition: all .3s ease-in-out;
+}
+
